@@ -4,6 +4,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 import Index from './components'
 import LoginPage from './components/login-page'
+import ProfilePage from './components/profile-page'
 
 
 export default class App extends React.Component {
@@ -13,7 +14,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <LoginPage />
+        <ProfilePage />
       </View>
     );
   }
@@ -27,6 +28,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#414246',
-    height: 1000
+    height: '100%'
   },
 });
