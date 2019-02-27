@@ -6,16 +6,18 @@ class LoginPage extends Component {
     state = {}
     render() {
         return (<View style={styles.container}>
-            <TouchableOpacity style={{ height: 50, width: 200 }}>
-                <Input style={styles.inputUsername} placeholder='Username'></Input>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ height: 50, width: 200 }}>
-                <Input style={styles.inputPassword} placeholder='Senha'></Input>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ height: 50, width: 200 }}>
-                <Button style={styles.buttonLogin} title="Login" primary><Text style={styles.loginText}>Login</Text></Button>
-            </TouchableOpacity>
-        </View >);
+            <Text style={styles.titleText}>Login</Text>
+            <View style={styles.inputContainer}>
+                <TouchableOpacity style={{ height: 50, width: 200 }}>
+                    <Input style={styles.inputUsername} placeholder='Username'></Input>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ height: 50, width: 200 }}>
+                    <Input secureTextEntry={true} style={styles.inputPassword} placeholder='Senha'></Input>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ height: 50, width: 200 }}>
+                    <Button style={styles.buttonLogin} title="Login"><Text style={styles.buttonText}>Login</Text></Button>
+                </TouchableOpacity>
+            </View ></View>);
     }
 }
 
@@ -24,7 +26,13 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: 300,
+        height: 200,
+        marginBottom: 600,
+    },
+    inputContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         height: 200
     },
     inputUsername: {
@@ -39,13 +47,18 @@ const styles = StyleSheet.create({
     },
     buttonLogin: {
         width: 200,
-        borderRadius: 10
+        borderRadius: 10,
+        backgroundColor: "#fef500"
     },
-    loginText: {
-        color: "#2da6ff",
-        marginRight: 35,
-        marginLeft: 20,
+    buttonText: {
+        color: "#000000",
+        marginLeft: 60,
         fontSize: 30
+    },
+    titleText: {
+        color: '#fef500',
+        fontSize: 80,
+        marginBottom: 50
     }
 })
 
