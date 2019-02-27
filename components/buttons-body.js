@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity, Alert } from 'react-native';
 import { Button } from 'native-base'
 import BlueBlock from './images/blue-block.png'
 import Blocks from './images/lego-blocks.png'
+
 
 class ButtonsBody extends Component {
     state = {}
@@ -42,11 +43,13 @@ const styles = StyleSheet.create({
     },
     buttonPersons: {
         flex: 1,
-        width: 200
+        width: 200,
+        borderRadius: 10
     },
     buttonCompany: {
         flex: 2,
-        width: 200
+        width: 200,
+        borderRadius: 10
     }
 })
 

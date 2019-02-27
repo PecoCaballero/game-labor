@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
-import { createStackNavigator, createAppContainer } from "react-navigation";
 import GameLabor from './images/Game-Labor-twice.png'
 import ButtonBody from './buttons-body'
 
 class Index extends Component {
     state = {}
+    static navigationOption = {
+        title: 'First Screen'
+    }
 
     render() {
-        return (<View style={styles.container} ><View style={styles.gameLabor} ><Image style={{ width: 300, height: 200 }} source={GameLabor}></Image></View>
-            <View style={styles.buttons}><ButtonBody /></View></View>);
+        let { navigator } = this.props
+        return (<View style={styles.container} ><View style={styles.gameLabor}><Image style={{ width: 300, height: 200 }} source={GameLabor}></Image></View>
+            <View style={styles.buttons}><ButtonBody navigator={appNavigator} /></View></View>);
     }
 }
 
