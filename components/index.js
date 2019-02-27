@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
-import GameLabor from './images/Game-Labor.png'
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import GameLabor from './images/Game-Labor-twice.png'
 import ButtonBody from './buttons-body'
 
 class Index extends Component {
     state = {}
 
     render() {
-        return (<View><View><Image style={styles.gameLabor} source={GameLabor}></Image></View>
-            <View><ButtonBody /></View></View>);
+        return (<View style={styles.container} ><View style={styles.gameLabor} ><Image style={{ width: 300, height: 200 }} source={GameLabor}></Image></View>
+            <View style={styles.buttons}><ButtonBody /></View></View>);
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
+        display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     gameLabor: {
-        display: 'flex',
-        alignContent: 'space-around',
+        flex: 1,
         margin: 50,
-
+    },
+    buttons: {
+        flex: 2,
+        marginTop: 250
     }
 });
+
 
 export default Index;
