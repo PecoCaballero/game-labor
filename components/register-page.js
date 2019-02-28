@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, ToastAndroid } from 'react-native';
 import { Input, Label, Item, Button } from 'native-base'
 import GameLabor from './images/Game-Labor-twice.png'
 
 class RegisterPage extends Component {
     static navigationOptions = {
-        title: 'Login',
+        title: 'Registro',
         headerStyle: {
             backgroundColor: '#fef500'
         }
@@ -25,9 +25,12 @@ class RegisterPage extends Component {
                 <Item style={styles.inputPassword}>
                     <Input secureTextEntry={true} placeholder='Confirme seu e-mail'></Input>
                 </Item>
-                <Item style={styles.buttonLogin} onPress={() => { navigate("Login") }}>
-                    <Button title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
-                </Item>
+                <TouchableOpacity style={styles.buttonLogin}>
+                    <Button title="Login" onPress={() => {
+                        ToastAndroid.show('Bem Vindo ao Game Labor!', ToastAndroid.SHORT);
+                        navigate("Office")
+                    }} transparent ><Text style={styles.loginText}>REGISTRE-SE</Text></Button>
+                </TouchableOpacity>
             </View >);
     }
 }
@@ -75,6 +78,7 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     loginText: {
+        marginLeft: '19%',
         color: "#000000",
         justifyContent: "center",
         alignItems: "center",

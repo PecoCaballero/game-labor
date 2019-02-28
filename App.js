@@ -1,5 +1,3 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 import Index from './components'
 import LoginPage from './components/login-page'
@@ -21,3 +19,4 @@ const App = createAppContainer(navigator)
 
 
 export default App
+

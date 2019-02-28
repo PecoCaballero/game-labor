@@ -22,10 +22,12 @@ class LoginPage extends Component {
                 <Item style={styles.inputPassword}>
                     <Input secureTextEntry={true} placeholder='Password'></Input>
                 </Item>
-                <Item style={styles.buttonLogin} onPress={() => { navigate("Office") }}>
-                    <Button title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
-                </Item>
-                <Button title="register" onPress={() => { navigate("Register") }} primary><Text>Resgistre-se já</Text></Button>
+                <TouchableOpacity style={styles.buttonLogin} >
+                    <Button onPress={() => { navigate("Office") }} title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Button title="register" onPress={() => { navigate("Register") }} transparent><Text style={{ color: '#ffffff' }}>Registre-se já</Text></Button>
+                </TouchableOpacity>
             </View >);
     }
 }
@@ -73,6 +75,7 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     loginText: {
+        marginLeft: '37%',
         color: "#000000",
         justifyContent: "center",
         alignItems: "center",
