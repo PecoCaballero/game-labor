@@ -9,7 +9,8 @@ class ButtonsBody extends Component {
     state = {}
     render() {
         let {navigate} = this.props
-        return (<View style={styles.buttonsDiv}>
+        return (
+        <View style={styles.buttonsDiv}>
             <TouchableOpacity style={{ height: 70 }}>
                 <Button style={styles.buttonPersons} onPress={() => navigate("Login")} bordered light>
                     <Image style={styles.blockIcon} source={BlueBlock} /><Text style={styles.buttonText}>Pessoa</Text>

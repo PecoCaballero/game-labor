@@ -9,12 +9,10 @@ class Index extends Component {
         header: null
     }
 
-
     render() {
         var { navigate } = this.props.navigation
         return (<View style={styles.container} ><View style={styles.gameLabor}><Image style={{ width: 300, height: 200 }} source={GameLabor}></Image></View>
             <View style={styles.buttons}><ButtonBody navigate={navigate} /></View></View>);
-
     }
 }
 
