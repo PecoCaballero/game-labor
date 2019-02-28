@@ -1,7 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation'
-
 import Index from './components'
 import LoginPage from './components/login-page'
 
@@ -19,14 +17,13 @@ export default class App extends React.Component {
   }
 }
 
-
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#414246',
-    height: 1000
+    height: "100%",
+    width: "100%"
   },
 });

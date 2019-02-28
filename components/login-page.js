@@ -1,50 +1,75 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Input, Label, Item, Button } from 'native-base'
+import GameLabor from './images/Game-Labor-twice.png'
 
 class LoginPage extends Component {
     state = {}
     render() {
-        return (<View style={styles.container}>
-            <TouchableOpacity style={{ height: 50, width: 200 }}>
-                <Input style={styles.inputUsername} placeholder='Username'></Input>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ height: 50, width: 200 }}>
-                <Input style={styles.inputPassword} placeholder='Senha'></Input>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ height: 50, width: 200 }}>
-                <Button style={styles.buttonLogin} title="Login" primary><Text style={styles.loginText}>Login</Text></Button>
-            </TouchableOpacity>
+        return (
+        <View style={styles.container}>
+            
+                <Item style={styles.inputUsername}>
+                    <Input placeholder='Username'></Input>
+                </Item>
+                <Item style={styles.inputPassword}>
+                    <Input secureTextEntry={true} placeholder='Password'></Input>
+                </Item>
+                <Item style={styles.buttonLogin}>
+                    <Button title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
+                </Item>
+            
         </View >);
     }
 }
 
 const styles = StyleSheet.create({
+
     container: {
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginBottom: 300,
-        height: 200
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "100%",
+        flexDirection: 'column',
+        flexGrow: 1
+
     },
     inputUsername: {
-        flex: 1,
+        display: 'flex',
+        flexWrap: 'wrap',
         backgroundColor: '#ffffff',
         borderRadius: 10,
+        width: "60%",
+        height: "10%",
+        padding: 10
+        
     },
     inputPassword: {
-        flex: 2,
+        display: 'flex',
+        flexWrap: 'wrap',
         backgroundColor: '#ffffff',
-        borderRadius: 10
+        borderRadius: 10,
+        height: "10%",
+        width: "60%",
+        padding: 10,
+        marginBottom: 50,
+        marginTop: 20
+        
+        
+
     },
     buttonLogin: {
-        width: 200,
-        borderRadius: 10
+        width: "60%",
+        borderRadius: 10,
+        backgroundColor: "#fef500",
+        alignItems: "center",
+        justifyContent: "center"
     },
     loginText: {
-        color: "#2da6ff",
-        marginRight: 35,
-        marginLeft: 20,
+        color: "#000000",
+        justifyContent: "center",
+        alignItems: "center",
         fontSize: 30
     }
 })
