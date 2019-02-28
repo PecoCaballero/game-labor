@@ -5,14 +5,16 @@ import ButtonBody from './buttons-body'
 
 class Index extends Component {
     state = {}
-    static navigationOption = {
-        title: 'First Screen'
+    static navigationOptions = {
+        header: null
     }
 
+
     render() {
-        let { navigator } = this.props
+        var { navigate } = this.props.navigation
         return (<View style={styles.container} ><View style={styles.gameLabor}><Image style={{ width: 300, height: 200 }} source={GameLabor}></Image></View>
-            <View style={styles.buttons}><ButtonBody /></View></View>);
+            <View style={styles.buttons}><ButtonBody navigate={navigate} /></View></View>);
+
     }
 }
 
@@ -21,6 +23,10 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: "#414246",
+        width: "100%",
+        height: "100%"
+        
         
     },
     gameLabor: {
@@ -29,7 +35,7 @@ const styles = StyleSheet.create({
     },
     buttons: {
         flex: 2,
-        marginTop: "40%",
+        marginTop: "50%",
         width: "50%"
     }
 });

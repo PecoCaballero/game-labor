@@ -4,21 +4,27 @@ import { Input, Label, Item, Button } from 'native-base'
 import GameLabor from './images/Game-Labor-twice.png'
 
 class LoginPage extends Component {
+    static navigationOptions = {
+        title: 'Login',
+        headerStyle: {
+            backgroundColor: '#fef500'
+        }
+    }
+
     state = {}
     render() {
+        var { navigate } = this.props.navigation
         return (
         <View style={styles.container}>
-            
-                <Item style={styles.inputUsername}>
-                    <Input placeholder='Username'></Input>
-                </Item>
-                <Item style={styles.inputPassword}>
-                    <Input secureTextEntry={true} placeholder='Password'></Input>
-                </Item>
-                <Item style={styles.buttonLogin}>
-                    <Button title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
-                </Item>
-            
+            <Item style={styles.inputUsername}>
+                <Input placeholder='Username'></Input>
+            </Item>
+            <Item style={styles.inputPassword}>
+                <Input secureTextEntry={true} placeholder='Password'></Input>
+            </Item>
+            <Item style={styles.buttonLogin} onPress={() => {navigate("Office")}}>
+                <Button  title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
+            </Item>
         </View >);
     }
 }
@@ -32,7 +38,8 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
         flexDirection: 'column',
-        flexGrow: 1
+        flexGrow: 1,
+        backgroundColor: "#414246"
 
     },
     inputUsername: {
@@ -56,8 +63,6 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         marginTop: 20
         
-        
-
     },
     buttonLogin: {
         width: "60%",
@@ -71,6 +76,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         fontSize: 30
+    },
+    titleText: {
+        color: '#fef500',
+        fontSize: 80,
+        marginBottom: 50
     }
 })
 
