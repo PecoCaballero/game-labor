@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Input, Label, Item, Button } from 'native-base'
+import GameLabor from './images/Game-Labor-twice.png'
 
 class LoginPage extends Component {
     static navigationOptions = {
@@ -12,56 +13,68 @@ class LoginPage extends Component {
 
     state = {}
     render() {
-        let { navigate } = this.props.navigation
-        return (<View style={styles.container}>
-            <Text style={styles.titleText}>Login</Text>
-            <View style={styles.inputContainer}>
-                <TouchableOpacity style={{ height: 50, width: 200 }}>
-                    <Input style={styles.inputUsername} placeholder='Username'></Input>
-                </TouchableOpacity>
-                <TouchableOpacity style={{ height: 50, width: 200 }}>
-                    <Input secureTextEntry={true} style={styles.inputPassword} placeholder='Senha'></Input>
-                </TouchableOpacity>
-                <TouchableOpacity style={{ height: 50, width: 200 }}>
-                    <Button style={styles.buttonLogin} onPress={() => navigate("Office")} title="Login"><Text style={styles.buttonText}>Login</Text></Button>
-                </TouchableOpacity>
-            </View ></View>);
+        var { navigate } = this.props.navigation
+        return (
+        <View style={styles.container}>
+            <Item style={styles.inputUsername}>
+                <Input placeholder='Username'></Input>
+            </Item>
+            <Item style={styles.inputPassword}>
+                <Input secureTextEntry={true} placeholder='Password'></Input>
+            </Item>
+            <Item style={styles.buttonLogin} onPress={() => {navigate("Office")}}>
+                <Button  title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
+            </Item>
+        </View >);
     }
 }
 
 const styles = StyleSheet.create({
+
     container: {
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        backgroundColor: '#414246',
-        height: '100%',
-        width: '100%',
-    },
-    inputContainer: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        height: 200
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "100%",
+        flexDirection: 'column',
+        flexGrow: 1,
+        backgroundColor: "#414246"
+
     },
     inputUsername: {
-        flex: 1,
+        display: 'flex',
+        flexWrap: 'wrap',
         backgroundColor: '#ffffff',
         borderRadius: 10,
+        width: "60%",
+        height: "10%",
+        padding: 10
+        
     },
     inputPassword: {
-        flex: 2,
+        display: 'flex',
+        flexWrap: 'wrap',
         backgroundColor: '#ffffff',
-        borderRadius: 10
+        borderRadius: 10,
+        height: "10%",
+        width: "60%",
+        padding: 10,
+        marginBottom: 50,
+        marginTop: 20
+        
     },
     buttonLogin: {
-        width: 200,
+        width: "60%",
         borderRadius: 10,
-        backgroundColor: "#fef500"
+        backgroundColor: "#fef500",
+        alignItems: "center",
+        justifyContent: "center"
     },
-    buttonText: {
+    loginText: {
         color: "#000000",
-        marginLeft: 60,
+        justifyContent: "center",
+        alignItems: "center",
         fontSize: 30
     },
     titleText: {

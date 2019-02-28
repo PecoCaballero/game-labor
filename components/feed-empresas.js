@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, BackAndroid } from 'react-native'
+import { View, Text } from 'react-native'
 import { Thumbnail, Input, Header, Button, Icon, InputGroup } from 'native-base'
-import { SearchBar } from 'react-native-elements'
-import feedStyles from './css/feed-styles'
-import Monitora from './images/monitora_bigger_branco.png'
+
+import Monitora from './images/monitora_bigger.png'
 import Facebook from './images/facebook.png'
 import Godaddy from './images/godaddy_branco.jpg'
 import Amazon from './images/amazon_branco.jpg'
@@ -24,6 +23,7 @@ class FeedEmpresas extends Component {
     }
 
     render() {
+        var { navigate } = this.props.navigation
         let { search } = this.state
         return (
             <View style={feedStyles.container}>

@@ -9,7 +9,6 @@ class Index extends Component {
         header: null
     }
 
-
     render() {
         var { navigate } = this.props.navigation
         return (<View style={styles.container} ><View style={styles.gameLabor}><Image style={{ width: 300, height: 200 }} source={GameLabor}></Image></View>
@@ -22,17 +21,20 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#414246',
-        height: '100%',
-        width: '100%'
+        backgroundColor: "#414246",
+        width: "100%",
+        height: "100%"
+        
+        
     },
     gameLabor: {
         flex: 1,
-        margin: 50,
+        marginTop: "15%",
     },
     buttons: {
         flex: 2,
-        marginTop: 250
+        marginTop: "50%",
+        width: "50%"
     }
 });
 

@@ -9,7 +9,6 @@ const profileStyles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
-
     container: {
         display: 'flex',
         justifyContent: 'center',
@@ -21,7 +20,6 @@ const profileStyles = StyleSheet.create({
     pageTitle: {
         color: '#414246',
         fontSize: 45,
-
     },
     topContainer: {
         display: 'flex',
@@ -63,7 +61,6 @@ const profileStyles = StyleSheet.create({
         height: "50%",
         marginTop: "15%",
     },
-
     formerJobs: {
         display: 'flex',
         justifyContent: 'center',
@@ -74,7 +71,6 @@ const profileStyles = StyleSheet.create({
         height: "40%",
         width: "200%",
         marginTop: '5%',
-
     },
     formerJobsText: {
         color: '#414246'

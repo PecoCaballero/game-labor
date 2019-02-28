@@ -9,7 +9,8 @@ class ButtonsBody extends Component {
     state = {}
     render() {
         let {navigate} = this.props
-        return (<View stle={styles.buttonsDiv}>
+        return (
+        <View style={styles.buttonsDiv}>
             <TouchableOpacity style={{ height: 70 }}>
                 <Button style={styles.buttonPersons} onPress={() => navigate("Login")} bordered light>
                     <Image style={styles.blockIcon} source={BlueBlock} /><Text style={styles.buttonText}>Pessoa</Text>
@@ -28,8 +29,9 @@ const styles = StyleSheet.create({
     buttonsDiv: {
         display: 'flex', alignItems: 'center',
         justifyContent: 'center',
-        height: 500,
-        width: 500
+        marginTop: "5%",
+        width: "100%",
+        
     },
     blockIcon: {
         height: 30,
@@ -38,19 +40,19 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: "#2da6ff",
-        marginRight: 35,
-        marginLeft: 20,
+        alignItems: "center",
         fontSize: 30
     },
     buttonPersons: {
         flex: 1,
-        width: 200,
-        borderRadius: 10
+        width: "100%",
+        borderRadius: 30
     },
     buttonCompany: {
+
         flex: 2,
-        width: 200,
-        borderRadius: 10
+        width: "100%",
+        borderRadius: 30
     }
 })
 
