@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, BackAndroid } from 'react-native';
 import { Thumbnail, Header, Button, Icon, Left, Body, Title } from 'native-base'
 import Pessoa from './images/pessoa2.jpg'
 import Java from './images/java_logo.png'
@@ -12,6 +12,7 @@ class ProfilePage extends Component {
             backgroundColor: '#fef500'
         }
     }
+
 
     render() {
         return (

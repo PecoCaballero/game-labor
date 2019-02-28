@@ -8,10 +8,7 @@ import officeStyles from './css/office-styles'
 class OfficePage extends Component {
     state = {}
     static navigationOptions = {
-        headerStyle: {
-            backgroundColor: '#fef500'
-        },
-        headerLeft: null
+        header: null
     }
 
     componentDidMount() {
@@ -19,7 +16,7 @@ class OfficePage extends Component {
     }
 
     handleBackButton = () => {
-        ToastAndroid.show('Para voltar: logout', ToastAndroid.SHORT);
+        ToastAndroid.show('Não é possível voltar desta página', ToastAndroid.SHORT);
         return true;
     }
 
@@ -29,8 +26,14 @@ class OfficePage extends Component {
             <View style={officeStyles.container}>
                 <ImageBackground source={Desk} style={{ marginTop: 30, width: '100%', height: '100%' }}>
                     <View style={officeStyles.buttonContainer}>
-                        <Button style={officeStyles.phoneButton} transparent onPress={() => navigate("FeedEmpresas")}></Button>
-                        <Button style={officeStyles.profileButton} transparent onPress={() => navigate("Profile")}></Button>
+                        <Button style={officeStyles.phoneButton} transparent onPress={() => {
+                            BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton)
+                            navigate("FeedEmpresas")
+                        }}></Button>
+                        <Button style={officeStyles.profileButton} transparent onPress={() => {
+                            BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton)
+                            navigate("Profile")
+                        }}></Button>
                     </View>
                 </ImageBackground>
             </View>);
