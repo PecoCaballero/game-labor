@@ -31,10 +31,10 @@ class ProfilePage extends Component {
                         </View>
                     </View>
                     <View styles={styles.formerJobsContainer}>
-                        <Text style={styles.achievementsText}>Posições Ocupadas</Text>
+                        <Text style={styles.achievementsText}>Recomendado para você</Text>
                         <View style={styles.formerJobs}>
                             <Text style={styles.formerJobsText}>Desenvolvedor Java</Text>
-                            <Text style={styles.formerJobsText}>o jogo </Text>
+                            <Text style={styles.formerJobsText}>Decolar.com</Text>
                         </View>
                     </View>
                 </View>
