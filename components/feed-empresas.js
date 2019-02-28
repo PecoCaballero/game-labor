@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native'
 import { Thumbnail, Input, Header, Button, Icon, InputGroup } from 'native-base'
+import { SearchBar } from 'react-native-elements'
 
 import Monitora from './images/monitora_bigger.png'
 import Facebook from './images/facebook.png'
@@ -8,6 +9,7 @@ import Godaddy from './images/godaddy_branco.jpg'
 import Amazon from './images/amazon_branco.jpg'
 import Java from './images/java_logo.png'
 import Mysql from './images/mysql.jpg'
+import feedStyles from './css/feed-styles'
 
 class FeedEmpresas extends Component {
     state = { search: "" }
