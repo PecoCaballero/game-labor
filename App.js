@@ -5,14 +5,16 @@ import ProfilePage from './components/profile-page'
 import OfficePage from './components/office-page'
 import FeedEmpresas from './components/feed-empresas'
 import RegisterPage from './components/register-page'
+import GamePage from './components/game-page'
 
 const navigator = createStackNavigator({
-  Home: { screen: Index },
+  Home: { screen: GamePage },
   Login: { screen: LoginPage },
   Register: { screen: RegisterPage },
   Office: { screen: OfficePage },
   Profile: { screen: ProfilePage },
-  FeedEmpresas: { screen: FeedEmpresas }
+  FeedEmpresas: { screen: FeedEmpresas },
+  Game: { screen: GamePage }
 })
 
 const App = createAppContainer(navigator)
