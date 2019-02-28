@@ -3,8 +3,16 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Input, Label, Item, Button } from 'native-base'
 
 class LoginPage extends Component {
+    static navigationOptions = {
+        title: 'Login',
+        headerStyle: {
+            backgroundColor: '#fef500'
+        }
+    }
+
     state = {}
     render() {
+        let { navigate } = this.props.navigation
         return (<View style={styles.container}>
             <Text style={styles.titleText}>Login</Text>
             <View style={styles.inputContainer}>
@@ -15,7 +23,7 @@ class LoginPage extends Component {
                     <Input secureTextEntry={true} style={styles.inputPassword} placeholder='Senha'></Input>
                 </TouchableOpacity>
                 <TouchableOpacity style={{ height: 50, width: 200 }}>
-                    <Button style={styles.buttonLogin} title="Login"><Text style={styles.buttonText}>Login</Text></Button>
+                    <Button style={styles.buttonLogin} onPress={() => navigate("Office")} title="Login"><Text style={styles.buttonText}>Login</Text></Button>
                 </TouchableOpacity>
             </View ></View>);
     }
@@ -26,8 +34,9 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: 200,
-        marginBottom: 600,
+        backgroundColor: '#414246',
+        height: '100%',
+        width: '100%',
     },
     inputContainer: {
         display: 'flex',

@@ -5,29 +5,18 @@ import { createStackNavigator, createAppContainer } from 'react-navigation'
 import Index from './components'
 import LoginPage from './components/login-page'
 import ProfilePage from './components/profile-page'
+import OfficePage from './components/office-page';
+import FeedEmpresas from './components/feed-empresas'
+
+const navigator = createStackNavigator({
+  Home: { screen: Index },
+  Login: { screen: LoginPage },
+  Office: { screen: OfficePage },
+  Profile: { screen: ProfilePage },
+  FeedEmpresas: { screen: FeedEmpresas }
+})
+
+const App = createAppContainer(navigator)
 
 
-export default class App extends React.Component {
-
-  updateStacker = () => { }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <ProfilePage />
-      </View>
-    );
-  }
-}
-
-
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#414246',
-    height: '100%'
-  },
-});
+export default App

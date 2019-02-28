@@ -6,13 +6,16 @@ import Java from './images/java_logo.png'
 
 class ProfilePage extends Component {
     state = {}
+    static navigationOptions = {
+        title: 'Profile',
+        headerStyle: {
+            backgroundColor: '#fef500'
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.header}>
-                    <Button style={styles.headerArrow}><Icon name='arrow-back'></Icon></Button>
-                    <Text style={styles.pageTitle}>Profile</Text>
-                </View>
                 <View style={styles.topContainer}>
                     <Thumbnail style={styles.thumbnailProfile} large source={Pessoa} />
                     <View style={styles.nameCarrerContainer} >
@@ -62,7 +65,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        height: '100%'
+        height: '100%',
+        backgroundColor: '#414246',
     },
     pageTitle: {
         color: '#414246',
