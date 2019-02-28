@@ -6,10 +6,12 @@ import LoginPage from './components/login-page'
 import ProfilePage from './components/profile-page'
 import OfficePage from './components/office-page'
 import FeedEmpresas from './components/feed-empresas'
+import RegisterPage from './components/register-page'
 
 const navigator = createStackNavigator({
   Home: { screen: Index },
   Login: { screen: LoginPage },
+  Register: { screen: RegisterPage },
   Office: { screen: OfficePage },
   Profile: { screen: ProfilePage },
   FeedEmpresas: { screen: FeedEmpresas }

@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Input, Label, Item, Button } from 'native-base'
 import GameLabor from './images/Game-Labor-twice.png'
 
-class LoginPage extends Component {
+class RegisterPage extends Component {
     static navigationOptions = {
         title: 'Login',
         headerStyle: {
@@ -17,15 +17,17 @@ class LoginPage extends Component {
         return (
             <View style={styles.container}>
                 <Item style={styles.inputUsername}>
-                    <Input placeholder='Username'></Input>
+                    <Input placeholder='E-mail'></Input>
                 </Item>
                 <Item style={styles.inputPassword}>
-                    <Input secureTextEntry={true} placeholder='Password'></Input>
+                    <Input secureTextEntry={true} placeholder='Senha'></Input>
                 </Item>
-                <Item style={styles.buttonLogin} onPress={() => { navigate("Office") }}>
+                <Item style={styles.inputPassword}>
+                    <Input secureTextEntry={true} placeholder='Confirme seu e-mail'></Input>
+                </Item>
+                <Item style={styles.buttonLogin} onPress={() => { navigate("Login") }}>
                     <Button title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
                 </Item>
-                <Button title="register" onPress={() => { navigate("Register") }} primary><Text>Resgistre-se já</Text></Button>
             </View >);
     }
 }
@@ -85,4 +87,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LoginPage;
+export default RegisterPage;
