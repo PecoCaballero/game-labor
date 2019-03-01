@@ -6,7 +6,7 @@ import Java from './images/java_logo.png'
 import profileStyles from "./css/profile-styles"
 
 class ProfilePage extends Component {
-    state = {}
+    state = { current_slot: ['Desenvolvedor Java', 'Decolar.com'], vaga1: ['Desenvolvedor Java', 'Decolar.com'], vaga2: ['Desenvolvedor Mobile', 'Mercado Livre'], position: 0 }
     static navigationOptions = {
         title: 'Profile',
         headerStyle: {
@@ -14,8 +14,19 @@ class ProfilePage extends Component {
         }
     }
 
+    handlePosistion = () => {
+        let { vaga1, vaga2, current_slot } = this.state
+        if (current_slot === vaga1) {
+            this.setState({ current_slot: vaga2 })
+        }
+        else {
+            this.setState({ current_slot: vaga1 })
+        }
+    }
+
     render() {
         var { navigate } = this.props
+        let { current_slot } = this.state
         return (
             <View style={profileStyles.container}>
                 <View style={profileStyles.topContainer}>
@@ -41,16 +52,16 @@ class ProfilePage extends Component {
                         </View>
                         <View style={profileStyles.formerJobs}>
                             <View style={profileStyles.arrowView}>
-                                <Button iconLeft transparent style={profileStyles.arrowLeft}>
+                                <Button iconLeft onPress={this.handlePosistion} transparent style={profileStyles.arrowLeft}>
                                     <Icon name='arrow-back' />
                                 </Button>
                             </View>
                             <View style={profileStyles.slotText}>
-                                <Text>Desenvolvedor Java</Text>
-                                <Text>Decolar.com</Text>
+                                <Text>{current_slot[0]}</Text>
+                                <Text>{current_slot[1]}</Text>
                             </View>
                             <View style={profileStyles.arrowView}>
-                                <Button iconRight style={profileStyles.arrowRight} transparent>
+                                <Button iconRight onPress={this.handlePosistion} style={profileStyles.arrowRight} transparent>
                                     <Icon name='arrow-forward' />
                                 </Button>
                             </View>
