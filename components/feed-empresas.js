@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native'
 import { Thumbnail, Input, Header, Button, Icon, InputGroup } from 'native-base'
+import { SearchBar } from 'react-native-elements'
 
-import Monitora from './images/monitora_bigger.png'
+import Monitora from './images/monitora_bigger_branco.png'
 import Facebook from './images/facebook.png'
-import Godaddy from './images/godaddy_bigger.png'
-import Amazon from './images/amazon.png'
+import Godaddy from './images/godaddy_branco.jpg'
+import Amazon from './images/amazon_branco.jpg'
+import Java from './images/java_logo.png'
+import Mysql from './images/mysql.jpg'
+import feedStyles from './css/feed-styles'
 
 class FeedEmpresas extends Component {
     state = { search: "" }
@@ -24,23 +28,51 @@ class FeedEmpresas extends Component {
         var { navigate } = this.props.navigation
         let { search } = this.state
         return (
-            <View>
-                
-                <View>
-                    <Thumbnail large source={Monitora}></Thumbnail>
-                    <Text>Desenvolvedor Full-Stack</Text>
-                </View >
-                <View>
-                    <Thumbnail large source={Facebook}></Thumbnail>
-                    <Text>Desenvolvedor React</Text>
+            <View style={feedStyles.container}>
+                <View style={feedStyles.searchBarContainer}>
+                    <SearchBar onChangeText={this.updateSearch} round platform='android' value={search} placeHolder="Search..."></SearchBar>
                 </View>
-                <View>
-                    <Thumbnail large source={Godaddy}></Thumbnail>
-                    <Text>Desenvolvedor React</Text>
-                </View>
-                <View>
-                    <Thumbnail large source={Amazon}></Thumbnail>
-                    <Text>Análista de dados</Text>
+                <View style={feedStyles.feedContainer}>
+                    <View style={feedStyles.contentContainer}>
+                        <Thumbnail large source={Monitora}></Thumbnail>
+                        <View style={feedStyles.slotView}>
+                            <Text style={feedStyles.slotName}>Desenvolvedor Full-Stack</Text>
+                            <View style={feedStyles.requirementView}>
+                                <Thumbnail small source={Java} />
+                                <Thumbnail small source={Mysql} />
+                            </View>
+                        </View>
+                    </View>
+                    <View style={feedStyles.contentContainer}>
+                        <Thumbnail large source={Facebook}></Thumbnail>
+                        <View style={feedStyles.slotView}>
+                            <Text style={feedStyles.slotName}>Desenvolvedor React</Text>
+                            <View style={feedStyles.requirementView}>
+                                <Thumbnail small source={Java} />
+                                <Thumbnail small source={Mysql} />
+                            </View>
+                        </View>
+                    </View>
+                    <View style={feedStyles.contentContainer}>
+                        <Thumbnail large source={Godaddy}></Thumbnail>
+                        <View style={feedStyles.slotView}>
+                            <Text style={feedStyles.slotName}>Desenvolvedor React</Text>
+                            <View style={feedStyles.requirementView}>
+                                <Thumbnail small source={Java} />
+                                <Thumbnail small source={Mysql} />
+                            </View>
+                        </View>
+                    </View>
+                    <View style={feedStyles.contentContainer}>
+                        <Thumbnail large source={Amazon}></Thumbnail>
+                        <View style={feedStyles.slotView}>
+                            <Text style={feedStyles.slotName}>Analista de dados</Text>
+                            <View style={feedStyles.requirementView}>
+                                <Thumbnail small source={Java} />
+                                <Thumbnail small source={Mysql} />
+                            </View>
+                        </View>
+                    </View>
                 </View>
             </View >);
     }

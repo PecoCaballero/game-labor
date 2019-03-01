@@ -8,20 +8,20 @@ import Blocks from './images/lego-blocks.png'
 class ButtonsBody extends Component {
     state = {}
     render() {
-        let {navigate} = this.props
+        let { navigate } = this.props
         return (
-        <View style={styles.buttonsDiv}>
-            <TouchableOpacity style={{ height: 70 }}>
-                <Button style={styles.buttonPersons} onPress={() => navigate("Login")} bordered light>
-                    <Image style={styles.blockIcon} source={BlueBlock} /><Text style={styles.buttonText}>Pessoa</Text>
-                </Button>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ marginTop: 30, height: 70 }}>
-                <Button style={styles.buttonCompany} bordered light>
-                    <Image style={styles.blockIcon} source={Blocks} /><Text style={styles.buttonText}>Empresa</Text>
-                </Button>
-            </TouchableOpacity>
-        </View >);
+            <View style={styles.buttonsDiv}>
+                <TouchableOpacity style={{ height: 70 }}>
+                    <Button style={styles.buttonPersons} onPress={() => navigate("Login")} bordered light>
+                        <Image style={styles.blockIcon} source={BlueBlock} /><Text style={styles.buttonText}>Pessoa</Text>
+                    </Button>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ marginTop: 30, height: 70 }}>
+                    <Button style={styles.buttonCompany} bordered light>
+                        <Image style={styles.blockIcon} source={Blocks} /><Text style={styles.buttonText}>Empresa</Text>
+                    </Button>
+                </TouchableOpacity>
+            </View >);
     }
 }
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         marginTop: "5%",
         width: "100%",
-        
+
     },
     blockIcon: {
         height: 30,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         marginLeft: 20
     },
     buttonText: {
-        color: "#2da6ff",
+        color: "#FFFFFF",
         alignItems: "center",
         fontSize: 30
     },
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
         borderRadius: 30
     },
     buttonCompany: {
-
         flex: 2,
         width: "100%",
         borderRadius: 30

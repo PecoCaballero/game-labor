@@ -26,8 +26,8 @@ class ProfilePage extends Component {
                 </View>
                 <View style={profileStyles.bottomContainer}>
                     <View style={profileStyles.achievementsContainer}>
-                    <View style={profileStyles.box}>
-                        <Text style={profileStyles.achievementsText}>CONQUISTAS RECENTES</Text></View>
+                        <View style={profileStyles.box}>
+                            <Text style={profileStyles.achievementsText}>CONQUISTAS RECENTES</Text></View>
                         <View style={profileStyles.skillContainer}>
                             <Thumbnail source={Java} />
                             <Text style={{ color: "#ffffff" }}> Nível 5</Text>

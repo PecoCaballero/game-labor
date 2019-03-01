@@ -1,4 +1,4 @@
-import {StyleSheet} from "react-native"
+import { StyleSheet } from "react-native"
 
 const profileStyles = StyleSheet.create({
     header: {
@@ -9,7 +9,6 @@ const profileStyles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
-    
     container: {
         display: 'flex',
         justifyContent: 'center',
@@ -21,7 +20,6 @@ const profileStyles = StyleSheet.create({
     pageTitle: {
         color: '#414246',
         fontSize: 45,
-        
     },
     topContainer: {
         display: 'flex',
@@ -29,8 +27,8 @@ const profileStyles = StyleSheet.create({
         marginTop: "1%",
         flexDirection: "row",
         marginTop: "-30%"
-        
-        
+
+
     },
 
     bottomContainer: {
@@ -63,7 +61,6 @@ const profileStyles = StyleSheet.create({
         height: "50%",
         marginTop: "15%",
     },
-    
     formerJobs: {
         display: 'flex',
         justifyContent: 'space-between',
