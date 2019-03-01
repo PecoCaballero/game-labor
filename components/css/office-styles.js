@@ -23,7 +23,17 @@ const officeStyles = StyleSheet.create({
         marginLeft: '45%',
         height: '50%',
         width: '35%'
+    },
+
+    computerButton: {
+        color: "#ff0000",
+        width: 150,
+        height: 80,
+        marginLeft: "100%",
+        marginTop: -185
+        
     }
+
 })
 
 export default officeStyles

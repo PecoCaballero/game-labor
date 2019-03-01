@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     buttonsDiv: {
         display: 'flex', alignItems: 'center',
         justifyContent: 'center',
+        flexDirection: "column",
         marginTop: "5%",
         width: "100%",
         

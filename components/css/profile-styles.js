@@ -66,16 +66,22 @@ const profileStyles = StyleSheet.create({
     
     formerJobs: {
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        flexDirection: "column",
-        borderRadius: 100,
-        backgroundColor: '#ffffff',
-        height: "40%",
-        width: "200%",
-        marginTop: '5%',
+        flexDirection: "row",
+        
+        backgroundColor: '#ff0000',
+        height: "20%",
+        width: "50%",
+        marginTop: "-20%"
         
     },
+
+    texto: {
+        width: "100%",
+        fontSize: 20
+    },
+
     formerJobsText: {
         color: '#414246'
     },
@@ -105,6 +111,15 @@ const profileStyles = StyleSheet.create({
         backgroundColor: "#808080"
     },
 
+    arrowLeft: {
+        borderColor: "#414246"
+    },
+
+    arrowRight: {
+        
+        
+        borderColor: "#414246"
+    }
 
 
 })

@@ -34,12 +34,21 @@ class ProfilePage extends Component {
                         </View>
                     </View>
                     <View style={profileStyles.formerJobsContainer}>
-                    <View style={profileStyles.box}>
-                        <Text style={profileStyles.achievementsText}>Recomendado para você</Text></View>
-                        <View style={profileStyles.formerJobs}>
-                            <Text style={profileStyles.formerJobsText}>Desenvolvedor Java</Text>
-                        </View>
+                    <Text style={profileStyles.achievementsText}>Recomendado para você</Text>
                     </View>
+
+                    <View style={profileStyles.formerJobs}>
+                    <Button iconLeft light style={profileStyles.arrowLeft}>
+                        <Icon name='arrow-back' />
+                    </Button>
+                    <View style={profileStyles.texto}>
+                        <Text>Desenvolvedor Java</Text>
+                    </View>
+                    <Button iconRight style={profileStyles.arrowRight} bordered>
+                        <Icon name='arrow-forward' />
+                    </Button>
+                    </View>
+                    
                 </View>
             </View >);
     }

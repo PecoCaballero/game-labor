@@ -32,8 +32,11 @@ class OfficePage extends Component {
                         }}></Button>
                         <Button style={officeStyles.profileButton} transparent onPress={() => {
                             BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton)
-                            navigate("Profile")
-                        }}></Button>
+                            navigate("Profile")}}>
+                            </Button>
+                            <Button style={officeStyles.computerButton} transparent onPress={() => {
+                            navigate("Game")}}>
+                            </Button>
                     </View>
                 </ImageBackground>
             </View>);

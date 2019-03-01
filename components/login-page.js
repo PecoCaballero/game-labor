@@ -23,7 +23,7 @@ class LoginPage extends Component {
                 <Input secureTextEntry={true} placeholder='Password'></Input>
             </Item>
             <Item style={styles.buttonLogin} onPress={() => {navigate("Office")}}>
-                <Button  title="Login" transparent><Text style={styles.loginText}>Login</Text></Button>
+                <Button title="Login" transparent value={"Login"}></Button>
             </Item>
         </View >);
     }

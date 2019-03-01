@@ -7,8 +7,9 @@ import ProfilePage from './components/profile-page'
 import OfficePage from './components/office-page'
 import FeedEmpresas from './components/feed-empresas'
 
+
 const navigator = createStackNavigator({
-  Home: { screen: ProfilePage },
+  Home: { screen: OfficePage },
   Login: { screen: LoginPage },
   Office: { screen: OfficePage },
   Profile: { screen: ProfilePage },
