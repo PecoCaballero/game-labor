@@ -9,7 +9,7 @@ import GamePage from './components/game-page'
 
 
 const navigator = createStackNavigator({
-  Home: { screen: OfficePage },
+  Home: { screen: Index },
   Login: { screen: LoginPage },
   Register: { screen: RegisterPage },
   Office: { screen: OfficePage },
