@@ -15,17 +15,24 @@ class LoginPage extends Component {
     render() {
         var { navigate } = this.props.navigation
         return (
-        <View style={styles.container}>
-            <Item style={styles.inputUsername}>
-                <Input placeholder='Username'></Input>
-            </Item>
-            <Item style={styles.inputPassword}>
-                <Input secureTextEntry={true} placeholder='Password'></Input>
-            </Item>
-            <Item style={styles.buttonLogin} onPress={() => {navigate("Office")}}>
-                <Button title="Login" transparent value={"Login"}></Button>
-            </Item>
-        </View >);
+            <View style={styles.container}>
+                <Item style={styles.inputUsername}>
+                    <Input placeholder='Username'></Input>
+                </Item>
+                <Item style={styles.inputPassword}>
+                    <Input secureTextEntry={true} placeholder='Password'></Input>
+                </Item>
+                <TouchableOpacity style={styles.buttonLogin}>
+                    <Button title="Login" onPress={() => {
+                        navigate("Office")
+                    }} transparent ><Text style={styles.loginText}>Login</Text></Button>
+                </TouchableOpacity>
+                <TouchableOpacity >
+                    <Button title="Login" onPress={() => {
+                        navigate("Register")
+                    }} transparent ><Text>Registre-se</Text></Button>
+                </TouchableOpacity>
+            </View >);
     }
 }
 
