@@ -35,7 +35,8 @@ const profileStyles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '50%',
+        justifyContent: 'space-evenly',
+        height: '55%',
         width: '80%',
         borderRadius: 10,
         backgroundColor: '#bab9be',
@@ -46,37 +47,37 @@ const profileStyles = StyleSheet.create({
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
-        height: '25%'
+        height: '50%'
     },
     skillContainer: {
-        margin: '1%',
         display: 'flex',
         justifyContent: 'center'
     },
 
     formerJobsContainer: {
         display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
         height: "50%",
-        marginTop: "15%",
+        width: '100%',
+        marginTop: "10%"
     },
     formerJobs: {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: "row",
-        
-        backgroundColor: '#ff0000',
-        height: "20%",
-        width: "50%",
-        marginTop: "-20%"
-        
-    },
+        height: "60%",
+        width: "90%",
 
-    texto: {
-        width: "100%",
-        fontSize: 20
+    },
+    slotText: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: "70%",
+        fontSize: 20,
+        backgroundColor: '#ffffff',
+        borderRadius: 30
     },
 
     formerJobsText: {
@@ -102,23 +103,33 @@ const profileStyles = StyleSheet.create({
         borderColor: '#ffffff'
     },
     achievementsText: {
-        marginTop: "10%",
         color: '#ffffff',
-        fontSize: 26,
-        backgroundColor: "#808080"
+        fontSize: 23
     },
-
+    achievementsView: {
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        height: '30%',
+        width: '80%'
+    },
     arrowLeft: {
-        borderColor: "#414246"
+        borderColor: "#ffffff"
     },
 
     arrowRight: {
-        
-        
-        borderColor: "#414246"
+        borderColor: "#ffffff"
+    },
+    arrowView: {
+        height: '60%',
+        width: '15%'
+    },
+    recommendedView: {
+        height: '20%',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center'
     }
-
-
 })
 
 export default profileStyles
